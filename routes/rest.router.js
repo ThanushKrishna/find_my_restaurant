@@ -1,5 +1,7 @@
-const express = require('express');
-const app = express();
-const restaurantController = require('../controllers/restaurant.controller');
+const express = require("express");
+const rRouter = express.Router();
+const restaurantController = require("../controllers/restaurant.controller");
 
-app.post("/", restaurantController.addRestaurant);
+rRouter.post("/", restaurantController.addRestaurant);
+
+module.exports = rRouter
